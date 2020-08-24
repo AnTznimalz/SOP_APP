@@ -37,7 +37,6 @@ public class WeaponMarget {
         System.out.println("-----------------Finished----------------");
     }
 
-    //static block initialization for exception handling
     public static WeaponMarget getInstance() {
         if (instance == null) {
             instance = new WeaponMarget();
@@ -58,5 +57,15 @@ public class WeaponMarget {
             return;
         }
         this.store.offer(w);
+    }
+
+    public void OrderWeapon(Weapon w, int number) {
+        for (int i = 0; i < number; i++) {
+            this.store.add(w.Clone());
+        }
+    }
+
+    public int getCountWeapon() {
+        return store.size();
     }
 }

@@ -13,20 +13,25 @@ public class MainApp {
 
     public static void main(String[] args) {
 //        word1
-        WeaponMarget market1 = WeaponMarget.getInstance();
+        WeaponMarget market = WeaponMarget.getInstance();
+        ;
+        System.out.println(market.getCountWeapon());
+        Gun g = new Gun();
+        market.OrderWeapon(g, 5);
+        System.out.println(market.getCountWeapon());
+        Sword s = new Sword();
+        market.OrderWeapon(s, 5);
+        System.out.println(market.getCountWeapon());
+
         Player player1 = new Player("player1");
         player1.Equip();
         player1.showStat();
 
 //        word2
-        WeaponMarget market2 = WeaponMarget.getInstance();
         Player player2 = new Player("player2");
         player2.Equip();
         player2.showStat();
-        
-        
-        
-        
+
         player1.Equip();
         player1.showStat();
 //        player1.showStat();
