@@ -32,7 +32,7 @@ public class Sword extends Weapon {
         return newSword;
     }
 
-    public void boot() {
+    public void boost() {
         this.atk += 10000;
         System.out.println("Boot Boot Bootooo!");
     }
