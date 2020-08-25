@@ -21,12 +21,14 @@ public class MainApp {
 //        System.out.println(market.getCountWeapon());
         Sword s = new Sword();
         s.boost();
-        s.boost();
+//        s.boost();
         market.OrderWeapon(s, 5);
-        System.out.println(market.getCountWeapon());
+        System.out.println(market);
+//        System.out.println(market.getCountWeapon());
 
         Player player1 = new Player("player1");
         player1.Equip();
+
         player1.Equip();
         player1.Equip();
         player1.Equip();
@@ -34,15 +36,22 @@ public class MainApp {
         player1.Equip();
         player1.Equip();
 //        player1.Equip();
+//        System.out.println(market);
         
 //        System.out.println(market);
-
-        player1.showStat();
-//        System.out.println(market);
 //        word2
-        Player player2 = new Player("player2");
+//        Player player2 = new Player("player2");
 //        player2.Equip();
-//        player2.showStat();
+        player1.showStat();
+//        player1.Equip();
+//        player2.unEquip();
+//        player1.Equip();
+//        player1.showStat();
+//        System.out.println(market);
+//        player2.unEquip();
+//        player1.Equip();
+//        player1.unEquip();
+//        System.out.println(market);
 //
 //        player1.Equip();
 //        player2.unEquip();
