@@ -12,10 +12,11 @@ package WeaponCollection;
 public class Sword extends Weapon {
 
     public Sword() {
-        this(100);
+        this(1);
     }
 
     public Sword(int Atk) {
+        this.name = "Excalibor";
         this.atk = Atk;
         this.description = "Melee Weapon Shink! Shink!";
     }
@@ -32,7 +33,7 @@ public class Sword extends Weapon {
     }
 
     public void boot() {
-        this.atk += 1;
+        this.atk += 10000;
         System.out.println("Boot Boot Bootooo!");
     }
 

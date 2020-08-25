@@ -14,7 +14,8 @@ public class Gun extends Weapon {
     private int ammo;
 
     public Gun() {
-        this.atk = 500;
+        this.name = "AK47";
+        this.atk = 100;
         this.description = "Range Weapon piw piw!!";
         this.ammo = 5;
     }
@@ -28,15 +29,6 @@ public class Gun extends Weapon {
         System.out.println("Take my money and get more One");
         Gun newGun = new Gun();
         return newGun;
-    }
-
-    public void fire() {
-        if (ammo > 0) {
-            System.out.println("Punk! Punk!");
-            this.ammo -= 1;
-        } else {
-            System.out.println("Reloaded");
-        }
     }
 
 }

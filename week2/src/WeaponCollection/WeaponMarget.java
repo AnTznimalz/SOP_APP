@@ -68,4 +68,8 @@ public class WeaponMarget {
     public int getCountWeapon() {
         return store.size();
     }
+
+    public String toString() {
+        return "Weapon Market have " + store.size() + " weapon";
+    }
 }

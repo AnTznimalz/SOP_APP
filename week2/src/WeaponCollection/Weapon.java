@@ -12,7 +12,7 @@ package WeaponCollection;
 public abstract class Weapon {
 
     int atk;
-    String description;
+    String description, name;
 
     public Weapon() {
     }

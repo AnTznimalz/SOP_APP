@@ -19,7 +19,7 @@ public class Player {
     private String name;
 
     public Player() {
-        this("");
+        this("-");
     }
 
     public Player(String name) {
@@ -27,20 +27,12 @@ public class Player {
         this.weapons = new LinkedList<Weapon>();
     }
 
-    public int getLv() {
-        return lv;
-    }
-
-    public void levelUp() {
-        this.lv += 1;
-    }
-
     public void Equip() {
         WeaponMarget market = WeaponMarget.getInstance();
         Weapon w = market.borrowWeapon();
         if (w != null) {
             this.weapons.add(w);
-            System.out.println(this.name + "borrow a weapon");
+            System.out.println(this.name + " borrow a weapon");
         }
 
     }
@@ -52,19 +44,20 @@ public class Player {
         } else {
             WeaponMarget market = WeaponMarget.getInstance();
             market.returnWeapon(w);
-            System.out.println(this.name + "return a weapon");
+            System.out.println(this.name + " return a weapon");
         }
     }
 
     public void showStat() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Lv." + this.lv);
         int sumAtk = this.baseAtk;
+        System.out.println("------Weapon list------");
         for (Weapon weapon : weapons) {
             if (weapon != null) {
                 sumAtk += weapon.atk;
+                System.out.println("-" + weapon.name + " ATK: " + weapon.atk);
             }
         }
-        System.out.println("ATK is " + sumAtk);
+        System.out.println("----End Weapon list----");
+        System.out.println(this.name + " ATK is " + sumAtk);
     }
 }
