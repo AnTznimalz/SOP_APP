@@ -18,7 +18,7 @@ public class Sword extends Weapon {
     public Sword(int Atk) {
         this.name = "Excalibor";
         this.atk = Atk;
-        this.description = "Melee Weapon Shink! Shink!";
+        this.description = "Melee Weapon";
     }
 
     /**
@@ -27,7 +27,7 @@ public class Sword extends Weapon {
      */
     @Override
     public Weapon Clone() {
-        System.out.println("Activate Skill Gate of Babilone");
+        System.out.println("forge!");
         Sword newSword = new Sword(this.atk);
         return newSword;
     }
